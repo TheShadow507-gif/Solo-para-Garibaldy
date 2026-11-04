@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un día especial para Camila 💜</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="floating-hearts"></div>
+<audio id="background-music" loop preload="auto"></audio>
+
+    <!-- PANTALLA DE BIENVENIDA -->
+    <section id="welcome" class="screen active">
+        <div class="welcome-card">
+            <div class="decoration">✦ ˚｡⋆୨୧⋆｡˚ ✦</div>
+            <div class="big-heart">💜</div>
+            <h1>¡Hola, personita especial!</h1>
+            <p>
+                Hoy es un día especial para alguien muy especial.
+                Pero antes de continuar, necesito comprobar algo...
+            </p>
+
+            <h2>¿Cuándo es tu cumpleaños?</h2>
+
+            <div class="date-inputs">
+                <input type="number" id="day" placeholder="Día" min="1" max="31">
+                <span>/</span>
+                <input type="number" id="month" placeholder="Mes" min="1" max="12">
+            </div>
+
+            <button class="main-button" onclick="checkDate()">
+                Entrar 💜
+            </button>
+
+            <p id="date-message" class="message"></p>
+            <div class="decoration">♡ ✧ ♡ ✧ ♡</div>
+        </div>
+    </section>
+
+    <!-- FELIZ CUMPLEAÑOS -->
+    <section id="birthday" class="screen">
+        <div class="birthday-card">
+            <div class="sparkles">✧ ✦ ✧ ✦ ✧</div>
+            <div class="birthday-cake">🎂</div>
+            <h1>¡Feliz cumpleaños,</h1>
+            <h1 class="name-title">Camila Graziani!</h1>
+            <p class="birthday-subtitle">
+                Hoy es tu día, y merece ser tan bonito y especial como tú.
+            </p>
+
+            <div class="birthday-decorations">
+
+                <span>🎀</span>
+                <span>💗</span>
+                <span>🌷</span>
+                <span>✨</span>
+                <span>🧸</span>
+<div class="dancing-character">
+    <img src="gifs/meisho-doto-dance.gif"
+         alt="Uma Musume bailando">
+    <p>¡Awawawawa! 🎀</p>
+</div>
+            </div>
+
+            <button class="main-button" onclick="showScreen('letter')">
+                Tengo algo que decirte 💌
+            </button>
+        </div>
+    </section>
+
+    <!-- CARTA -->
+    <section id="letter" class="screen">
+        <div class="letter-card">
+            <div class="letter-icon">💌</div>
+            <h1>Una pequeña carta para ti</h1>
+
+            <div class="letter-content">
+                <p>
+                    Hoy es un día muy especial para mí, debido a que hoy
+                    cumple años mi hermosa y querida novia Camila.
+                </p>
+
+                <p>
+                    Hoy hace 16 años ella nació. Una persona que en el futuro
+                    se convertiría en alguien demasiado especial en mi vida.
+                </p>
+
+                <p>
+                    Ella ha hecho que mi vida se vuelva más feliz, más
+                    entretenida, más divertida, más cachonda y llena de retos.
+                </p>
+
+                <p>
+                    Solo quiero desearle un feliz cumpleaños y que siga
+                    cumpliendo muchos años más, que pase el resto de su vida
+                    feliz y, obviamente, que esté conmigo.
+                </p>
+
+                <p class="letter-love">Te amo. 💜</p>
+                <p class="signature">Atentamente, Ivan.</p>
+            </div>
+
+            <button class="main-button" onclick="showScreen('menu')">
+                Continuar ✨
+            </button>
+        </div>
+    </section>
+
+    <!-- MENÚ PRINCIPAL -->
+    <section id="menu" class="screen">
+        <div class="menu-container">
+            <div class="menu-heading">
+                <span>♡</span>
+                <h1>Un pequeño mundo para nosotros</h1>
+                <p>Explora cada rincón. Hay cositas preparadas para ti.</p>
+            </div>
+
+            <div class="menu-grid">
+                <button class="menu-card anime-card" onclick="openSection('animes')">
+                    <span class="menu-emoji">🌸</span>
+                    <h2>ANIMES UWU</h2>
+                    <p>Nuestros gustos, personajes y universos favoritos.</p>
+                    <span class="card-arrow">Entrar →</span>
+                </button>
+
+                <button class="menu-card music-card" onclick="openSection('music')">
+                    <span class="menu-emoji">🎧</span>
+                    <h2>MÚSICAS GOAT</h2>
+                    <p>Un pequeño espacio para nuestras canciones.</p>
+                    <span class="card-arrow">Entrar →</span>
+                </button>
+
+                <button class="menu-card us-card" onclick="openSection('us')">
+                    <span class="menu-emoji">🩵💜</span>
+                    <h2>US</h2>
+                    <p>Personajes, recuerdos y cositas de nosotros.</p>
+                    <span class="card-arrow">Entrar →</span>
+                </button>
+            </div>
+
+            <div id="unlock-area">
+                <p id="unlock-message">Visita las tres secciones para descubrir una sorpresa. ♡</p>
+                <button id="final-unlock" class="secret-button hidden" onclick="showScreen('final')">
+                    ¿Sin ninguna relación? 💜
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- ANIMES -->
+<section id="animes" class="screen">
+
+    <div class="section-container">
+
+        <h1>🌸 ANIMES UWU 🌸</h1>
+        <p class="section-intro">
+            Un poquito de nuestros mundos favoritos.
+        </p>
+
+        <div class="anime-columns">
+
+            <!-- ANIMES DE IVAN -->
+            <div class="anime-group">
+
+                <h2>Los animes de Ivan</h2>
+
+                <div class="anime-item dragon">
+                    <img class="anime-image"
+                         src="imagenes/Dragonball.jpg"
+                         alt="Dragon Ball">
+
+                    <h3>Dragon Ball</h3>
+                    <p>¡Poder, aventuras y batallas épicas!</p>
+                </div>
+
+                <div class="anime-item jojo">
+                    <img class="anime-image"
+                         src="imagenes/JoJo.jpg"
+                         alt="JoJo's Bizarre Adventure">
+
+                    <h3>JoJo's Bizarre Adventure</h3>
+                    <p>¡Poses, peleas y tragedias!</p>
+                </div>
+
+            </div>
+            <!-- AQUÍ SE CIERRA EL GRUPO DE IVAN -->
+
+
+            <!-- ANIMES DE CAMILA -->
+            <div class="anime-group">
+
+                <h2>Los animes de Camila</h2>
+
+                <div class="anime-item kimi">
+                    <img class="anime-image"
+                         src="imagenes/Kiminitodoke.jpg"
+                         alt="Kimi ni Todoke">
+
+                    <h3>Kimi ni Todoke</h3>
+                    <p>Amor, romance estudiantil y felicidad.</p>
+                </div>
+
+                <div class="anime-item nana">
+                    <img class="anime-image"
+                         src="imagenes/Nana.jpg"
+                         alt="Nana">
+
+                    <h3>Nana</h3>
+                    <p>Música, amistad y emociones.</p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- AQUÍ SE CIERRA LA COLUMNA DE ANIMES -->
+
+
+        <!-- ANIME QUE COMPARTEN -->
+        <div class="both-anime">
+
+            <h2>Y uno que compartimos...</h2>
+
+            <div class="uma-card">
+
+                <div class="uma-decor">🐎 ✨ 🐎</div>
+
+                <h2>Uma Musume: Pretty Derby</h2>
+
+                <p>Porque también tenemos gustos en común.</p>
+
+                <div class="uma-characters">
+
+                    <div class="character-placeholder">
+                        <img class="anime-image"
+                             src="imagenes/meisho-doto.png"
+                             alt="Meisho Doto">
+
+                        <strong>Meisho Doto</strong>
+                    </div>
+
+                    <div class="character-placeholder">
+                        <img class="anime-image"
+                             src="imagenes/tm-opera-o.png"
+                             alt="TM Opera O">
+
+                        <strong>TM Opera O</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="backToMenu('animes')">
+            ← Volver al menú
+        </button>
+
+    </div>
+
+</section>
+                      
+
+<!-- MÚSICA -->
+<section id="music" class="screen">
+    <div class="section-container music-container">
+
+        <h1>🎧 MÚSICAS GOAT 🎧</h1>
+        <p class="section-intro">
+            Canciones que forman parte de nuestros gustos.
+        </p>
+
+        <!-- CANCIONES DE CAMILA -->
+        <div class="music-profile camila-music">
+            <h2>🎀 Canciones de Camila</h2>
+            <p>Artista : Milo J</p>
+
+            <div class="song-list">
+
+                <button class="song-button"
+                    onclick="playSong('musica/J1.mp3.mpeg', 'Canción 1 - Milo J')">
+                    <span>▶</span>
+                    <span>
+                        <strong>Canción 1</strong>
+                        <small>Milo J</small>
+                    </span>
+                </button>
+
+                <button class="song-button"
+                    onclick="playSong('musica/j2.mp3.mp4', 'Canción 2 - Milo J')">
+                    <span>▶</span>
+                    <span>
+                        <strong>Canción 2</strong>
+                        <small>Milo J</small>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- CANCIONES DE IVAN -->
+        <div class="music-profile ivan-music">
+            <h2>💜 Canciones de Ivan</h2>
+
+            <div class="song-list">
+
+                <button class="song-button"
+                    onclick="playSong('musica/hero.mp3.mpeg', 'Hero - Mis Papayas')">
+                    <span>▶</span>
+                    <span>
+                        <strong>Hero</strong>
+                        <small>Mis Papayas</small>
+                    </span>
+                </button>
+
+                <button class="song-button"
+                    onclick="playSong('musica/shes-homeless.mp3.mpeg', 'She’s Homeless - Creepy')">
+                    <span>▶</span>
+                    <span>
+                        <strong>She's Homeless</strong>
+                        <small>Creepy</small>
+                    </span>
+                </button>
+
+                <button class="song-button"
+                    onclick="playSong('musica/hola.mp3.mpeg', 'Aserejé - The Ketchup Song')">
+                    <span>▶</span>
+                    <span>
+                        <strong>Aserejé</strong>
+                        <small>The Ketchup Song</small>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- REPRODUCTOR -->
+        <div class="player-box">
+            <p id="now-playing">
+                Selecciona una canción para reproducirla.
+            </p>
+
+            <audio id="audio-player" controls preload="metadata"></audio>
+        </div>
+
+        <button class="back-button" onclick="backToMenu('music')">
+            ← Volver al menú
+        </button>
+
+    </div>
+</section>
+
+
+<!-- US -->
+<section id="us" class="screen">
+    <div class="section-container">
+
+        <h1>💜 US 💜</h1>
+
+        <p class="section-intro">
+            Porque algunas parejas de anime nos recuerdan un poquito a nosotros.
+        </p>
+
+        <!-- SAWAKO Y KAZEHAYA -->
+        <div class="couple-card">
+            <h2>🌸 Sawako & Kazehaya 🌸</h2>
+
+            <div class="couple-grid">
+                <div class="character-card">
+                    <img src="imagenes/sawako.png" alt="Sawako">
+                    <p>Sawako Kuronuma</p>
+                </div>
+
+                <div class="character-card">
+                    <img src="imagenes/kasehaya.png" alt="Kazehaya">
+                    <p>Shota Kazehaya</p>
+                </div>
+            </div>
+
+            <p class="couple-description">
+                Una pareja llena de ternura, cariño y momentos especiales. 💗
+            </p>
+        </div>
+
+        <!-- MEISHO DOTO Y TM OPERA O -->
+        <div class="couple-card">
+            <h2>🐎 Meisho Doto & TM Opera O 🐎</h2>
+
+            <div class="couple-grid">
+                <div class="character-card">
+                    <img src="imagenes/meisho-dotoo.png" alt="Meisho Doto">
+                    <p>Meisho Doto</p>
+                </div>
+
+                <div class="character-card">
+                    <img src="imagenes/tm-opera-oo.png" alt="TM Opera O">
+                    <p>TM Opera O</p>
+                </div>
+            </div>
+
+            <p class="couple-description">
+                Dos personajes que también tienen un lugar especial en nuestros gustos. 💜
+            </p>
+        </div>
+
+        <!-- NOSOTROS -->
+        <div class="our-photo">
+            <h2>💞 Y finalmente... nosotros 💞</h2>
+
+            <img src="imagenes/us.jpg.jpeg" alt="Nuestra fotografía">
+
+            <p>
+                De todas las historias que existen, mi favorita es la que
+                estamos escribiendo juntos.
+            </p>
+
+            <p class="love-message">
+                Tú, mi complemento, mi media naranja. 💜
+            </p>
+        </div>
+
+        <!-- NUESTRA CANCIÓN -->
+        <div class="our-song">
+            <h2>🎵 Nuestra canción 🎵</h2>
+
+            <p>Una canción que también forma parte de nosotros.</p>
+
+            <button class="song-button"
+                onclick="playSong('musica/media.mp3.mpeg', 'Nuestra canción')">
+                💜 Reproducir nuestra canción
+            </button>
+        </div>
+
+        <button class="back-button" onclick="backToMenu()">
+            Volver al menú
+        </button>
+
+    </div>
+</section>
+
+
+    <!-- SORPRESA FINAL -->
+    <section id="final" class="screen">
+        <div class="final-container">
+            <div class="final-stars">✦ ✧ ✦ ✧ ✦</div>
+            <h1>Una última cosita...</h1>
+            <p>Hay algo que quiero recordarte muchas veces.</p>
+
+            <div class="giant-heart">💜</div>
+
+            <div id="hundred-loves" class="hundred-loves"></div>
+
+            <h2 class="final-message">
+                Gracias por existir y por hacer mi vida más bonita.
+                Te amo muchísimo, Camila. 💜
+            </h2>
+
+            <p class="signature">Con mucho cariño, Ivan.</p>
+
+            <button class="back-button" onclick="showScreen('menu')">
+                Volver al menú
+            </button>
+        </div>
+    </section>
+
+</body>
+</html>
